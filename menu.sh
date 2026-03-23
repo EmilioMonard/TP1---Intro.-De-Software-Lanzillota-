@@ -1,5 +1,12 @@
 #!/bin/bash
 
+# Validar variable de entorno
+if [ -z "$FILENAME" ] 
+then
+  echo "Error: definir variable de entorno FILENAME"
+  exit 1
+fi
+
 if [ "$1" == "-d" ]
 then
 	echo "borrando todo el entorno"
